@@ -1,11 +1,11 @@
 ﻿
-@model IEnumerable<WishList.Models.Item>
+@model List<WishList.Models.Item>
 
 <h1>Wishlist</h1>
-
+<a asp-action="Create">Add item</a>
 <ul>
     @foreach (var item in Model)
     {
-        <li>@item.Description <a asp-action="Delete" asp-route-id="@item.Id">Delete</a></li>
+        <li>@item.Description <a>Delete</a></li>
     }
 </ul>
